@@ -39,8 +39,28 @@ namespace VelikaiMalaSlova
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-            Input = richTextBox1.Text;
         }
-    }
 
+        private void clearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+        }
+
+        private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string selectedText = richTextBox1.SelectedText;
+
+        }
+
+        private void allCapitalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string selectedText = richTextBox1.SelectedText;
+            if (selectedText != null)
+            {
+                var svaVelika = selectedText.ToUpper();
+                richTextBox1.SelectedText = svaVelika;
+            }
+        }
+
+    }
 }

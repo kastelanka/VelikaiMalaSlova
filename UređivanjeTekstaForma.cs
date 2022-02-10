@@ -48,8 +48,7 @@ namespace VelikaiMalaSlova
 
         private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string selectedText = richTextBox1.SelectedText;
-
+            richTextBox1.SelectAll();
         }
 
         private void allCapitalToolStripMenuItem_Click(object sender, EventArgs e)

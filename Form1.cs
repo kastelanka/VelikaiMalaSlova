@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace VelikaiMalaSlova
 {
-    public partial class Form1 : Form
+    public partial class VelikaIMalaSlova : Form
     {
-        public Form1()
+        public VelikaIMalaSlova()
         {
             InitializeComponent();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+                String Input = textBoxUnosTeksta.Text;
         }
 
     }

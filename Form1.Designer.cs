@@ -1,7 +1,7 @@
 ﻿
 namespace VelikaiMalaSlova
 {
-    partial class Form1
+    partial class VelikaIMalaSlova
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace VelikaiMalaSlova
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VelikaIMalaSlova));
             this.textBoxUnosTeksta = new System.Windows.Forms.TextBox();
             this.UnosTeksta = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -45,7 +45,7 @@ namespace VelikaiMalaSlova
             resources.ApplyResources(this.UnosTeksta, "UnosTeksta");
             this.UnosTeksta.Name = "UnosTeksta";
             // 
-            // Form1
+            // VelikaIMalaSlova
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -53,7 +53,7 @@ namespace VelikaiMalaSlova
             this.Controls.Add(this.textBoxUnosTeksta);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "Form1";
+            this.Name = "VelikaIMalaSlova";
             this.ResumeLayout(false);
             this.PerformLayout();
 

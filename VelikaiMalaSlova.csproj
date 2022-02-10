@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SaveFileEventArgs.cs" />
     <Compile Include="UređivanjeTekstaForma.cs">
       <SubType>Form</SubType>
     </Compile>

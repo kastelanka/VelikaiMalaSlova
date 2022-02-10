@@ -16,7 +16,7 @@ namespace VelikaiMalaSlova
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VelikaIMalaSlova());
+            Application.Run(new UređivanjeTekstaForma());
         }
     }
 }

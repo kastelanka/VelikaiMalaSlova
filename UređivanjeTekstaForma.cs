@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VelikaiMalaSlova
 {
-    public partial class VelikaIMalaSlova : Form
+    public partial class UređivanjeTekstaForma : Form
     {
-        public VelikaIMalaSlova()
+        public UređivanjeTekstaForma()
         {
             InitializeComponent();
         }

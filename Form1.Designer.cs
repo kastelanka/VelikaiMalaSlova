@@ -29,13 +29,40 @@ namespace VelikaiMalaSlova
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.textBoxUnosTeksta = new System.Windows.Forms.TextBox();
+            this.UnosTeksta = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // textBoxUnosTeksta
+            // 
+            resources.ApplyResources(this.textBoxUnosTeksta, "textBoxUnosTeksta");
+            this.textBoxUnosTeksta.Name = "textBoxUnosTeksta";
+            this.textBoxUnosTeksta.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // UnosTeksta
+            // 
+            resources.ApplyResources(this.UnosTeksta, "UnosTeksta");
+            this.UnosTeksta.Name = "UnosTeksta";
+            // 
+            // Form1
+            // 
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.UnosTeksta);
+            this.Controls.Add(this.textBoxUnosTeksta);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Name = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox textBoxUnosTeksta;
+        private System.Windows.Forms.Label UnosTeksta;
     }
 }
 

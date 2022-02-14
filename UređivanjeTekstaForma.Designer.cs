@@ -112,6 +112,7 @@ namespace VelikaiMalaSlova
             // 
             this.spellinToolStripMenuItem.Name = "spellinToolStripMenuItem";
             resources.ApplyResources(this.spellinToolStripMenuItem, "spellinToolStripMenuItem");
+            this.spellinToolStripMenuItem.Click += new System.EventHandler(this.spellingToolStripMenuItem_Click);
             // 
             // richTextBox1
             // 

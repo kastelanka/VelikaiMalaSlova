@@ -33,7 +33,7 @@ namespace VelikaiMalaSlova
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                richTextBox1.LoadFile(openFileDialog1.FileName);
+                richTextBox1.LoadFile(openFileDialog1.FileName, RichTextBoxStreamType.PlainText);
             }
         }
 
@@ -53,12 +53,38 @@ namespace VelikaiMalaSlova
 
         private void allCapitalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string selectedText = richTextBox1.SelectedText;
-            if (selectedText != null)
+            if (richTextBox1.SelectedText != null)
             {
-                var svaVelika = selectedText.ToUpper();
+                var svaVelika = richTextBox1.SelectedText.ToUpper();
                 richTextBox1.SelectedText = svaVelika;
             }
+        }
+
+        private void spellingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var selectedTextLower = richTextBox1.SelectedText.ToLower();
+            char[] separator = { '.', '!', '?'};
+            String [] textArraySplit = selectedTextLower.Split(separator);
+            RichTextBox textSpelling = new RichTextBox();
+
+            foreach (var sentence in textArraySplit)
+            {
+                //textArraySplitSpellingRules.Add(UppercaseFirst(sentence));
+                textSpelling.AppendText(UppercaseFirst(sentence));
+            }
+
+            richTextBox1.SelectedText = textSpelling.Text;
+        }
+
+
+        static string UppercaseFirst(string s)
+        {
+            if (string.IsNullOrEmpty(s))
+            {
+                return string.Empty;
+            }
+            
+            return char.ToUpper(s[0]) + s.Substring(1);
         }
 
     }

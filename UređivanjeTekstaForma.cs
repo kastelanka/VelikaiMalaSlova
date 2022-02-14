@@ -65,6 +65,7 @@ namespace VelikaiMalaSlova
         {
             RichTextBox textSpelling = new RichTextBox();
             var selectedTextLower = richTextBox1.SelectedText.ToLower();
+            
             String[] selectedTextLowerSplit = Regex.Split(selectedTextLower, @"(?<=[\.!\?])\s+");
             
             foreach (var sentence in selectedTextLowerSplit)
@@ -78,13 +79,12 @@ namespace VelikaiMalaSlova
 
         static string UppercaseFirst(string s)
         {
-            if (!string.IsNullOrEmpty(s))
+            if (string.IsNullOrEmpty(s))
             {
                 return string.Empty;
             }
             
-            return char.ToUpper(s[0]) + s.Substring(1);
+            return char.ToUpper(s[0]) + s.Substring(1) + " ";
         }
-
     }
 }

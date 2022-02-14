@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -62,14 +63,12 @@ namespace VelikaiMalaSlova
 
         private void spellingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var selectedTextLower = richTextBox1.SelectedText.ToLower();
-            char[] separator = { '.', '!', '?'};
-            String [] textArraySplit = selectedTextLower.Split(separator);
             RichTextBox textSpelling = new RichTextBox();
-
+            var selectedTextLower = richTextBox1.SelectedText.ToLower();
+            String[] textArraySplit = Regex.Split(selectedTextLower, @"(?<=[\.!\?])\s+");
+            
             foreach (var sentence in textArraySplit)
             {
-                //textArraySplitSpellingRules.Add(UppercaseFirst(sentence));
                 textSpelling.AppendText(UppercaseFirst(sentence));
             }
 
